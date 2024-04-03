@@ -1,0 +1,36 @@
+﻿CREATE TABLE [dbo].[MVCFORM] (
+    [Id]        INT    primary key         IDENTITY (1, 1) NOT NULL,
+    [RollNo]    VARCHAR (20)    NOT NULL,
+    [Name]      VARCHAR (50)    NOT NULL,
+    [Gender]    VARCHAR (50)    NULL,
+    [DOB]       DATE            NULL,
+    [Class]     INT             NULL,
+    [Address]   VARCHAR (MAX)   NULL,
+    [Transport] VARCHAR (20)    NULL,
+    [Football]  BIT             NULL,
+    [Kabadi]    BIT             NULL,
+    [Coco]      BIT             NULL,
+	[Cricket]   BIT             NULL,
+	[Comments]  VARCHAR (MAX)   NULL,
+    [Photo]     VARBINARY (MAX) NULL
+);
+
+CREATE TABLE [dbo].[Roles](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](max) NULL)
+
+	CREATE TABLE [dbo].[Users](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[UserId] [nvarchar](max) NULL,
+	[UserName] [nvarchar](max) NULL,
+	[Password] [nvarchar](max) NULL,
+	[RoleId] [int] NOT NULL)
+	--drop table users
+	  Insert into Users (UserId,UserName,Password,RoleId) Values ('dee1','dee','dee',1)
+  Insert into Users (UserId,UserName,Password,RoleId) Values ('dee2','dee','dee',2)
+  Insert into Users (UserId,UserName,Password,RoleId) Values ('dee3','dee','dee',3)
+
+    Insert into Roles(Name) Values ('SuperAdmin')
+           Insert into Roles(Name) Values ('Admin')
+          Insert into Roles(Name) Values ('Normal')
+

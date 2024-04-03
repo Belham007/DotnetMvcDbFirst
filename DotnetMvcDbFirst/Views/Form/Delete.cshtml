@@ -1,0 +1,128 @@
+﻿@model DotnetMvcDbFirst.Context.MVCFORM
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>MVCFORM</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RollNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RollNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DOB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DOB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Class)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Class)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Transport)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Transport)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Football)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Football)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kabadi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kabadi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Coco)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Coco)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cricket)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cricket)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comments)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comments)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Photo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Photo)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
